@@ -8,6 +8,7 @@ module OdiSlackbot
 
     post '/' do
       puts params[:token]
+      puts params['token']
       bot.handle_item(params)
     end
 
