@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+- 2.0.0
+- 1.9.3
+- jruby-19mode
+- rbx-2
+deploy:
+  provider: heroku
+  api_key:
+    secure: QVkVFLhn09T5JZDrI5kXnFnbRZdPgb9WyB6EAnXU+0dB1ktIFsrA31SQhFDDVCgSvQWsHWX+pu+JemBvAjOghJPCCHte+pFXQSmM1oyOlg4YYC3CjsCr20mokqlhXuX9euOK3soekfAx0XwA1GJjKzUahgCO1/6/Gh+EP4Msy9Q=
+  app: odi-slackbot
+  on:
+    repo: theodi/odi-slackbot
