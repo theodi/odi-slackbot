@@ -1,14 +1,13 @@
 require 'slackbotsy'
 require 'sinatra'
 require 'yaml'
-
-
+require 'erb'
 
 module OdiSlackbot
   class App < Sinatra::Base
 
     post '/' do
-      puts params
+      puts params[:token]
       bot.handle_item(params)
     end
 
