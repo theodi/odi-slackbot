@@ -1,4 +1,4 @@
 channel: "#default"
 name: odibot
-incoming_webhook: 'https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX'
-outgoing_token: secret
+incoming_webhook: <%= ENV['SLACK_WEBHOOK'] %>
+outgoing_token: <%= ENV['SLACK_TOKEN'] %>
