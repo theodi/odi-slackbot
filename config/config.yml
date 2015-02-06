@@ -1,4 +1,4 @@
-channel: "#default"
+channel: "#test"
 name: odibot
 incoming_webhook: <%= ENV['SLACK_WEBHOOK'] %>
 outgoing_token: <%= ENV['SLACK_TOKEN'] %>
