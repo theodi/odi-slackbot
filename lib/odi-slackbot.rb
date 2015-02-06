@@ -2,12 +2,12 @@ require 'slackbotsy'
 require 'sinatra'
 require 'yaml'
 
+
+
 module OdiSlackbot
   class App < Sinatra::Base
 
     post '/' do
-      require 'pry'
-      binding.pry
       bot.handle_item(params)
     end
 
