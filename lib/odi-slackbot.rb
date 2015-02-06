@@ -1,10 +1,11 @@
 require 'slackbotsy'
 require 'sinatra'
+require 'yaml'
 
-require_relative 'bot'
+config = YAML.load(ERB.new(File.read("config/config.yml")).result)
 
-@bot = OdiSlackbot::Bot.new
-@bot.eval_scripts(File.open(File.join("lib", "scripts", "*")))
+@bot = Slackbotsy::Bot.new(config)
+@bot.eval_scripts(Dir[File.join(File.dirname(File.expand_path(__FILE__)), 'lib', 'scripts', '**', '*.rb')])
 
 module OdiSlackbot
   class App < Sinatra::Base
