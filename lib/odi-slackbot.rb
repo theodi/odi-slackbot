@@ -8,6 +8,7 @@ module OdiSlackbot
   class App < Sinatra::Base
 
     post '/' do
+      puts params
       bot.handle_item(params)
     end
 
