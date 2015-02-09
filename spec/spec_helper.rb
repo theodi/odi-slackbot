@@ -1,3 +1,6 @@
+require 'coveralls'
+Coveralls.wear!
+
 require './lib/odi-slackbot'
 require 'webmock/rspec'
 
