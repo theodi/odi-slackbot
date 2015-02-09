@@ -1,4 +1,5 @@
 require 'sinatra'
+require_relative './scripts/helpers/images'
 require_relative './slackbot'
 
 module OdiSlackbot

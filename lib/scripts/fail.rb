@@ -1,5 +1,5 @@
 require 'open-uri'
 
-hear /fail/ do
+hear /fail/i do
   open('https://buildmemes.herokuapp.com/f').read
 end
